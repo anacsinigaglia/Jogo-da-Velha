@@ -1,0 +1,85 @@
+body {
+  margin: 1% 0 0 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: small;
+
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 25x;
+}
+
+.titulo span {
+  color: rgba(250, 128, 114, 0.6);
+}
+
+.tabuleiro {
+  margin-top: 30px;
+  background: rgb(255, 104, 87);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.quadrado {
+  height: 130px;
+  width: 130px;
+  cursor: pointer;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-box {
+  font-weight: bold;
+  padding: 25px 0 0 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.botao {
+  padding: 4px 7px;
+  color: black;
+}
+
+.botao:hover {
+  margin: -1px 0 0 1px;
+  padding: 4px 7px;
+  color: rgb(219, 233, 20);
+  cursor: pointer;
+}
+
+.X,
+.O {
+  cursor: default;
+}
+
+.X::after {
+  content: "×";
+  font-size: 105px;
+  color: rgba(250, 128, 114, 0.781);
+}
+
+.O::after {
+  content: "○";
+  font-size: 120px;
+  color: rgba(250, 128, 114, 0.281);
+}
+
+.ganhou::after {
+  color: rgb(219, 233, 20);
+}
